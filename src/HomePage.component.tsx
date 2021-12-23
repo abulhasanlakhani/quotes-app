@@ -12,7 +12,9 @@ const Title = styled.h1`
   color: palevioletred;
 `
 
-const FiltersPanel = styled.div``
+const FiltersPanel = styled.div`
+    padding: 5px 
+`
 
 const QuotesContainer = styled.div`
     display: grid;
