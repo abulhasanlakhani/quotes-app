@@ -1,6 +1,11 @@
 import React from 'react'
 import styled from 'styled-components';
 
+const Container = styled.main`
+    margin: 5px auto;
+`
+Container.displayName = 'Container'
+
 const Title = styled.h1`
   font-size: 1.5em;
   text-align: center;
@@ -8,7 +13,24 @@ const Title = styled.h1`
 `
 
 const FiltersPanel = styled.div``
-const QuotesContainer = styled.div``
+
+const QuotesContainer = styled.div`
+    display: grid;
+    place-items: center;
+`
+QuotesContainer.displayName = 'QuotesContainer'
+
+const QuoteBody = styled.section`
+    width: clamp(40ch, 90%, 90%);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+`
+
+const QuoteText = styled.div`
+
+`
+
 const Tags = styled.ul`
     list-style: none;
     margin: 0;
@@ -67,7 +89,7 @@ const Tag = styled.a`
 `
 
 const HomePage = () => (
-    <div className='homepage'>
+    <Container>
         <div className='mainBanner'>
             <Title>Title from styled components</Title>
         </div>
@@ -77,8 +99,10 @@ const HomePage = () => (
                 <a className='leftNav' href='#'>Left</a>
                 <a className='rightNav' href='#'>Right</a>
             </div>
-            <div className='quoteBody'>
-                <div className='quoteText'>QUOTE TEXT</div>
+            <QuoteBody>
+                <QuoteText>
+                    <p>Descriptive Text. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed est error repellat veritatis.</p>
+                </QuoteText>
                 <span className='quoteAuthor'>AUTHOR</span>
                 <Tags>
                     <li><Tag href="#">Religious</Tag></li>
@@ -86,9 +110,9 @@ const HomePage = () => (
                     <li><Tag href="#">Islam</Tag></li>
                 </Tags>
                 <div className='lastUpdated'></div>
-            </div>
+            </QuoteBody>
         </QuotesContainer>
-    </div>
+    </Container>
 )
 
 export default HomePage
