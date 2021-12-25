@@ -21,7 +21,7 @@ const StyledTag = styled.a`
     text-decoration: none;
     text-shadow: 0 1px 2px rgba(0,0,0,0.2);
     font-weight: bold;
-    background: #de3f3e;
+    background: ${props => props.color ? props.color : "#de3f3e" };
 
     &::before {
         content: "";
@@ -30,7 +30,7 @@ const StyledTag = styled.a`
         left: -12px;
         width: 0;
         height: 0;
-        border-color: transparent #de3f3e transparent transparent;
+        border-color: transparent ${props => props.color ? props.color : "#de3f3e" } transparent transparent;
         border-style: solid;
         border-width: 12px 12px 12px 0;
     }
@@ -65,9 +65,14 @@ const StyledTag = styled.a`
     }
 `
 
-const Tag = () => {
+type TagProps = {
+    tagColor: string,
+    tagName: string
+}
+
+const Tag = ({tagColor, tagName}:TagProps) => {
     return (
-        <li><StyledTag href="#">Religious</StyledTag></li>
+        <li><StyledTag href="#" color={tagColor}>{tagName}</StyledTag></li>
     )
 }
 

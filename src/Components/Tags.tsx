@@ -24,9 +24,9 @@ const TagsContainer = styled.ul`
 const Tags = () => {
     return (
         <TagsContainer>
-            <Tag />
-            <Tag />
-            <Tag />
+            <Tag tagColor="red" tagName="Religious" />
+            <Tag tagColor="black" tagName="Technology" />
+            <Tag tagColor="blue" tagName="Business" />
         </TagsContainer>
     )
 }
