@@ -1,0 +1,97 @@
+[
+  {
+    "_id": "fvpORe-t",
+    "name": "famous-quotes",
+    "color": "red"
+  },
+  {
+    "_id": "poT-7QEBm",
+    "name": "life",
+    "color": "#032f4e"
+  },
+  {
+    "_id": "rnrd8q9X1",
+    "name": "love",
+    "color": "green"
+  },
+  {
+    "_id": "JCMoLDds9",
+    "name": "inspirational",
+    "color": "#ddbe92"
+  },
+  {
+    "_id": "M83oc3scg",
+    "name": "business",
+    "color": "orange"
+  },
+  {
+    "_id": "KBWnDu4rH",
+    "name": "history",
+    "color": "purple"
+  },
+  {
+    "_id": "96NNdxeI_",
+    "name": "politics",
+    "color": "black"
+  },
+  {
+    "_id": "krXU-q4FE",
+    "name": "friendship",
+    "color": "brown"
+  },
+  {
+    "_id": "6J1qxxuj3",
+    "name": "wisdom",
+    "color": "pink"
+  },
+  {
+    "_id": "k97A51Uf5",
+    "name": "happiness",
+    "color": "gray"
+  },
+  {
+    "_id": "p5xRCWCdU",
+    "name": "proverb",
+    "color": "#385647"
+  },
+  {
+    "_id": "-7GEUrC5r",
+    "name": "faith",
+    "color": "#18251f"
+  },
+  {
+    "_id": "OMnUd1CUg",
+    "name": "future",
+    "color": "#02193b"
+  },
+  {
+    "_id": "vmVZQ72P_",
+    "name": "nature",
+    "color": "blue"
+  },
+  {
+    "_id": "tWLCsyf_K",
+    "name": "religion",
+    "color": "blue"
+  },
+  {
+    "_id": "Gq75KBrfb",
+    "name": "technology",
+    "color": "blue"
+  },
+  {
+    "_id": "wm1HFcO8vf",
+    "name": "success",
+    "color": "#8e4329"
+  },
+  {
+    "_id": "qO4zwIUdFW",
+    "name": "science",
+    "color": "blue"
+  },
+  {
+    "_id": "kqzFRe-4V4",
+    "name": "education",
+    "color": "blue"
+  }
+]

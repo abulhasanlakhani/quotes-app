@@ -3,7 +3,10 @@ import styled from 'styled-components';
 import Quotes from './Quotes';
 
 const Container = styled.main`
-    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    width: clamp(350px, 100%, 100%);
 `
 Container.displayName = 'Container'
 

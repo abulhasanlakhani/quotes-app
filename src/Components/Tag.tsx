@@ -22,6 +22,7 @@ const StyledTag = styled.a`
     text-shadow: 0 1px 2px rgba(0,0,0,0.2);
     font-weight: bold;
     background: ${props => props.color ? props.color : "#de3f3e" };
+    white-space: nowrap;
 
     &::before {
         content: "";
@@ -65,14 +66,15 @@ const StyledTag = styled.a`
     }
 `
 
-type TagProps = {
+export type TagProps = {
+    key: number,
     tagColor: string,
-    tagName: string
+    name: string
 }
 
-const Tag = ({tagColor, tagName}:TagProps) => {
+const Tag = ({tagColor, name}:TagProps) => {
     return (
-        <li><StyledTag href="#" color={tagColor}>{tagName}</StyledTag></li>
+        <li><StyledTag href="#" color={tagColor}>{name}</StyledTag></li>
     )
 }
 

@@ -1,32 +1,33 @@
 import React from 'react'
 import styled from 'styled-components'
 import Tag from './Tag'
+import tagsCollection from '../Data/tags.json';
 
 const TagsContainer = styled.ul`
     list-style: none;
-    margin: 0;
-    /* overflow: hidden; */
     padding: 0;
-    /* margin: 0 10px; */
-    padding: 5px;
-    /*display: flex;
-    place-items: center center;
-    align-self: center;*/
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    display: flex;
+    width: 100%;
+    margin: 0;
+    place-content: flex-end;
+    flex-wrap: wrap;
 
     & li {
         float: left;
     }
 `
 
-const Tags = () => {
+export type TagsProps = {
+    tags: string[]
+}
+
+const Tags = ({tags}: TagsProps) => {
     return (
         <TagsContainer>
-            <Tag tagColor="red" tagName="Religious" />
-            <Tag tagColor="black" tagName="Technology" />
-            <Tag tagColor="blue" tagName="Business" />
+            {tags.map((tag, index) => {
+                const tagColor: string | undefined = tagsCollection.find(item => item.name === tag)?.color
+                return <Tag key={index} name={tag} tagColor={tagColor ?? "black"} />
+            })}
         </TagsContainer>
     )
 }

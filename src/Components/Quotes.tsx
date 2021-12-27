@@ -1,29 +1,25 @@
 import React from 'react'
 import styled from 'styled-components';
 import Quote from './Quote';
+import quotes from '../Data/quotes.json';
 
 const QuotesContainer = styled.div`
-    height: 80vh;
+    padding: 0 20px;
     display: flex;
     place-content: center;
     align-items: center;
     position: relative;
     flex-direction: column;
+    margin-top: 10px;
 `
 QuotesContainer.displayName = 'QuotesContainer'
-
-const QuoteText = styled.div`
-    padding: 5px;
-`
-const Author = styled.span`
-    padding: 5px;
-`
 
 const Quotes = () => {
     return (
         <QuotesContainer>
-            <Quote />
-            <Quote />
+            {quotes.map(({_id, ...otherQuoteProps }) => (
+                <Quote key={_id} {...otherQuoteProps} />
+            ))}
         </QuotesContainer>
     )
 }
