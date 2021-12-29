@@ -1,7 +1,6 @@
-import React from 'react'
 import styled from 'styled-components'
 
-const StyledTag = styled.a`
+export const StyledTag = styled.a`
     display: inline-block;
     height: 24px;
     line-height: 24px;
@@ -65,17 +64,19 @@ const StyledTag = styled.a`
         border-left-color: #666 !important; 
     }
 `
+StyledTag.displayName = 'StyledTag'
 
-export type TagProps = {
-    key: number,
-    tagColor: string,
-    name: string
-}
+export const TagsContainer = styled.ul`
+    list-style: none;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    margin: 0;
+    place-content: flex-end;
+    flex-wrap: wrap;
 
-const Tag = ({tagColor, name}:TagProps) => {
-    return (
-        <li><StyledTag href="#" color={tagColor}>{name}</StyledTag></li>
-    )
-}
-
-export default Tag
+    & li {
+        float: left;
+    }
+`
+TagsContainer.displayName = 'TagsContainer'
